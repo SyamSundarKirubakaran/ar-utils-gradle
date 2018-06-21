@@ -27,6 +27,7 @@ allprojects {
     ext.supportLibsVersion = '26.0.2'
     ext.wearVersion = '2.1.0'
     ext.gvrVersion = '1.150.0'
+    ext.arVersion = '1.2.0'
     ext.processingVersion = '3.3.7'
     ext.toolingVersion = '4.3'
     ext.slf4jVersion = '1.7.10'
@@ -42,8 +43,8 @@ allprojects {
     ext.vrLibVersion = vrProperties.getProperty("prettyVersion")
 
     Properties arProperties = new Properties()
-    vrProperties.load(project.rootProject.file("mode/libraries/ar/library.properties").newDataInputStream())
-    ext.vrLibVersion = vrProperties.getProperty("prettyVersion")
+    arProperties.load(project.rootProject.file("mode/libraries/ar/library.properties").newDataInputStream())
+    ext.arLibVersion = arProperties.getProperty("prettyVersion")
 
 
     def fn = project.rootProject.file("local.properties")
